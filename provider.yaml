@@ -1,0 +1,10 @@
+apiVersion: gcp.crossplane.io/v1alpha3
+kind: Provider
+metadata:
+  name: gcp-provider
+spec:
+  projectID: # GCP project ID here e.g., my-project
+  credentialsSecretRef:
+    namespace: default
+    name: gcp-account-creds
+    key: credentials

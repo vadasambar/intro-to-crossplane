@@ -1,0 +1,13 @@
+apiVersion: compute.crossplane.io/v1alpha1
+kind: KubernetesCluster
+metadata:
+  name: example-cluster
+  namespace: default
+  annotations:
+    crossplane.io/external-name: example-cluster
+spec:
+  classSelector:
+    matchLabels:
+      className: "gke-class"
+  writeConnectionSecretToRef:
+    name: example-cluster
