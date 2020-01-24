@@ -2,13 +2,13 @@ apiVersion: container.gcp.crossplane.io/v1alpha1
 kind: NodePool
 metadata:
   name: gke-nodepool
-  namespace: crossplane-system
+  namespace: default
 spec:
   providerRef:
     name: gcp-provider
   writeConnectionSecretToRef:
     name: gke-nodepool
-    namespace: crossplane-system
+    namespace: default
 
   forProvider:
     cluster: # resource link to your cluster. 
